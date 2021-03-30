@@ -1,0 +1,17 @@
+namespace: metallb-system
+
+resources:
+  - github.com/metallb/metallb/manifests?ref=v0.9.6
+
+configMapGenerator:
+- name: config
+  files:
+    - configs/config
+
+secretGenerator:
+- name: memberlist
+  files:
+    - secretkey=configs/secret.key
+
+generatorOptions:
+  disableNameSuffixHash: true
