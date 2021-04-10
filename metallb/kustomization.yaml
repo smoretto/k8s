@@ -6,7 +6,7 @@ resources:
 configMapGenerator:
 - name: config
   files:
-    - configs/config
+    - configs/config.yaml
 
 secretGenerator:
 - name: memberlist
