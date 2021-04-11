@@ -1,0 +1,36 @@
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+
+entryPoints:
+  web:
+    address: :8000/tcp
+    # http:
+    #   redirections:
+    #     entryPoint:
+    #       to: websecure
+    #       scheme: https
+  websecure:
+    address: :8443/tcp
+  traefik:
+    address: :9000/tcp
+
+log:
+  level: INFO
+  # format: json
+
+accessLog: {}
+#  format: json
+
+api:
+  dashboard: true
+
+ping: {}
+
+providers:
+  kubernetesCRD: {} 
+  kubernetesIngress: {}
+# providers.kubernetesingress.ingressendpoint.ip=192.168.1.2
+
+#metrics:
+#  prometheus: {}

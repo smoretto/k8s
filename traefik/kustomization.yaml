@@ -1,0 +1,28 @@
+namespace: traefik
+
+resources:
+  - namespace.yaml
+  - service-account.yaml
+  - cluster-role.yaml
+  - cluster-role-binding.yaml
+  - deployment.yaml
+  - service.yaml
+  - crds/ingressroute.yaml
+  - crds/ingressroutetcp.yaml
+  - crds/ingressrouteudp.yaml
+  - crds/middlewares.yaml
+  - crds/serverstransports.yaml
+  - crds/tlsoptions.yaml
+  - crds/tlsstores.yaml
+  - crds/traefikservices.yaml 
+
+configMapGenerator:
+- name: traefik-config
+  files:
+    - configs/traefik.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+commonLabels:
+  app: traefik
