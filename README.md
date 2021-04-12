@@ -9,6 +9,15 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/down
 ## MetalLB
 Version: **v0.9.6**
 
+Create `metallb/config/secret.key` with MetalLB secret.
+
 ```
 kubectl apply -k metallb
+```
+
+## Traefik
+Version: **v2.4.8**
+
+```
+kubectl apply -k traefik
 ```
