@@ -21,3 +21,17 @@ Version: **v2.4.8**
 ```
 kubectl apply -k traefik
 ```
+
+## Cert Manager
+Version: **v1.0.3**
+
+```
+kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.3.0/cert-manager.yaml
+```
+
+## External DNS
+Version: **v0.7.6**
+
+```
+kubectl apply -k external-dns
+```

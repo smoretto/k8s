@@ -1,0 +1,15 @@
+namespace: external-dns
+
+resources:
+  - namespace.yaml
+  - service-account.yaml
+  - cluster-role.yaml
+  - cluster-role-binding.yaml
+  - deployment.yaml
+
+secretGenerator:
+- name: cloudflare
+  env: configs/cloudflare.key
+
+generatorOptions:
+  disableNameSuffixHash: true
