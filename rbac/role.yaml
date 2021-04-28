@@ -15,6 +15,12 @@ rules:
   - update
   - patch
 - apiGroups:
+  - ""
+  resources:
+  - namespaces
+  verbs:
+  - get
+- apiGroups:
   - apps
   resources:
   - deployments
